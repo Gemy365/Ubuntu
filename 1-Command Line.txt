@@ -1,0 +1,102 @@
+			--------------------------------	
+			-    Ubuntu 16.04.2 Terminal   -
+			--------------------------------
+
+- Ctrl +  Alt  + T 			 		 >> To Open    The  New       Terminal
+- Ctrl + Shift + T 			 		 >> To Open    The  New       Terminal Next To Old Terminal
+- Ctrl + D		 		 		 >> To Exit    From Cat And   Terminal
+- Ctrl + L				 		 >> To Clear   The  Terminal
+- Ctrl + _				 		 >> To Make    The  Terminal  Smaller and smaller
+- Ctrl + 0				 		 >> To Make    The  Terminal  Normal  Size
+- Ctrl + ?				 		 >> To Clear   The  Long Line In Once
+- Ctrl + 7				 		 >> To Restore Ur   Long Line [CareFull If U Still Press It U 'll Lose Ur Line For Ever]
+- Q,[Up][Down],b,Space,g,G,/"Word",n	 		 >> To Exit From Less,Move,Page-Up,Page-Down,Top,End,Search,Next Search
+- Tab			 		  		 >> To Complete your Type Auto
+1- pwd  	  	 		  		 >> for which Dir you 're Currntly in
+2- ls /home/		 	 	  		 >> to show Name OF User
+3- ls ~			 		  		 >> for Home Dir
+4- ls -l 		 		  		 >> list with long format ( Read,Write,Excute,Date,..,etc)
+5- ls -lS 	  	 		  		 >> Sort Dirs by the Largest Size
+6- ls -a 	  	 		  		 >> show a hidden Dir & files (started by [.] )
+7- ls -d */		 		  		 >> show Only Dirs
+8- ls -R 		 		  		 >> Show All The Paths Of All Dirs exists
+9- ls Desktop/*.txt	 		  		 >> search of all file have [.txt] in Desktop
+10- cd  		 		  		 >> Open Home Dir
+11- cd  /				  		 >> Open Root (My Computer)
+12- cd  .. 		 		  		 >> goto back 1 Dir
+13- cd  ../..		  		  		 >> goto Back 2 Dir 
+14- cat Test.txt	 		  	 	 >> Open Files
+15- cat -b Test.txt 	 		   		 >> To Number the Line without Space	  [1- , 2- , 3- , .. , etc]
+16- cat -n Test.txt 	 		  		 >> To Number the Line & Number Space	  [1- , 2- , 3- , .. , etc]
+17- cat -s Test.txt	 		  		 >> To Display One Space If there're Many Of Them To Gether
+18- cat -E Test.txt	 		  		 >> Put [$] At End Of Every Line
+19- cat >  Test.txt	 		  		 >> Create  [Test.txt] And Type InSide it
+20- cat >> Test.txt	 		 		 >> Type    over and over InSide it
+21- cat t1.txt t2.txt > Out.txt 	 		 >> will    Create[Out.txt] And Save Resource of [t1 , t2]
+22- mkdir     Image 			 		 >> Create  Dir Called Image
+23- mkdir     Image/Pics		 		 >> Create  Dir Called Pics InSide Dir Image 			 [Create One After One]
+24- mkdir -p  Image/Pics		 		 >> Create  Dir Called Pics InSide Dir Image 			 [Create them at the Same Time]
+25- mkdir -pv Image/Pics/photo/Icons	 		 >> Create  & Show steps of created 	 			 [Create them at the Same Time]
+26- mkdir -p  Image/{Pics,Photo}	 		 >> Create  All of these Dirs 				    	 [Create them at the Same Time]
+27- rmdir     Image 			 		 >> Remove  Dir Called Image	
+28- rmdir     Image/Pics		 		 >> Remove  Dir Called Pics From InSide Dir Image 		 [Remove One After One]
+29- rmdir -p  Image/Pics		 		 >> Remove  Dir Called Pics From InSide Dir Image 		 [Remove them at the Same Time]
+30- rmdir -pv Image/Pics/photo/Icons			 >> Remove  & Show steps of Removed 	 	 		 [Remove them at the Same Time]
+31- rmdir -p  Image/{Pics,Photo}			 >> Remove  All of these Dirs 				 	 [Remove them at the Same Time]
+32- rm        Test.txt			 		 >> Remove  File Called Test.txt 
+33- rm    -r  Image/Pics/File.txt/Icons  		 >> Remove  All Dirs & Files if them Alone Or Together    	 [Remove them at the Same Time]
+34- cp 	      Test1.txt Test2.txt	 		 >> To Copy Source Test1 [File] Into Test2 [File] 	 	 [Create Test2.txt If Not Exists]	
+35- cp 	      Test1.txt Test2		 		 >> To Copy Source Test1 [File] Into Test2 [Dir] 	  	 [Must Test2 is Exists]	
+36- cp 	  -i  Test1.txt Test2.txt Gemy   		 >> Ask If  Test1 [File] Or Test2 [File] Exists In Gemy [Dir]	 [Ask wanna Replace or not Before Copying] 
+37- cp 	  -R  Test1 	Test2		 		 >> To Copy Test1 [Dir] Into Test2 [Dir] 	 		 [Create Test2 If Not Exists]
+38- cp 	  -Rv Test1 	Test2		 		 >> To Copy Test1 [Dir] Into Test2 [Dir] & Show steps of Copied  [Create Test2 If Not Exists]
+39- mv        Test1.txt Test2.txt	 		 >> To Move Source Test1 [File] Into Test2 [File] 	 	 [Will Rename  If Test2.txt Not Exists]	
+40- mv 	  -i  Test1.txt Test2.txt Gemy   		 >> Ask If  Test1 [File] Or Test2 [File] Exists In Gemy [Dir]	 [Ask wanna Replace or not Before Moving] 
+41- mv 	      Test1 	Test2		 		 >> To Move Test1 [Dir] Into Test2 [Dir] 	 		 [Will Rename  If Test2 Not Exists]
+42- less      Test1.txt			 		 >> To Read File Very Big Line By Line
+43- touch     Test1.txt			  		 >> Update  Time This File Only					 [Create Test1.txt If Not Exists]
+44- sudo      su			  		 >> Create  File & Dirs Like A Administrator			 [Super User Do When Permission Denied]
+45- sudo  -s				 		 >> Create  File & Dirs Like A Administrator			 [Super User Do When Permission Denied]
+46- sudo useradd "Name Of User" -m -s /bin/bash -g users >> Create  New User
+47- sudo passwd  "Name Of User"				 >> Create  New Password
+48- sudo userdel -r "Name Of User"			 >> Delete  The User
+49- sudo apt-get update && sudo apt-get upgrade		 >> Get     Update & Upgrade
+50- sudo apt-get install	 "Name Of Program" 	 >> Install New Program
+51- sudo apt-get remove --purge  "Name Of Program"	 >> Remove  The Program
+52- pidof    "Name Of Process"		 		 >> Show    Process ID Of THis Process				 [If U Know The Name of This Process]
+53- kill     "PID"			 		 >> Kill    The Process Have This ID
+54- kill  -KILL				 		 >> Strong  Kill To kill This Process
+55- top					 		 >> Show    All processes & PID					 [If U Need To Know The Name of This Process] [Press (i) To Show Activites Processes Only)]
+56- ps    -ux						 >> Show    All processes & PID					 [If U Need To Know The Name of This Process]
+57- echo     "Hey Gemy"					 >> Print   Hey Gemy
+58- Name="Gemy"						 >> Create  Variable Called Gemy				 [Don't Make Any Space when U Create Variable]
+59- echo     $Name 					 >> Print   The Variable
+60- chmod u=rwx "Name File"				 >> Give    Permission To User  [Read,Write,Execute]   		 [Use (ls -l) To Show The Permissions] [(-)To Know That is File] [(rwx)It's For User all Permission] [(rw-)It's For Group Read Write Only] [(r--)It's for Other Read Only]
+61- chmod g+rw  "Name File"				 >> Give    Permission To Group [Read,Write Only]   		 [Use (ls -l) To Show The Permissions]
+62- chmod o-r   "Name File"		 		 >> Don't   Permission To Other [Read only]     		 [Use (ls -l) To Show The Permissions]
+63- chmod a=rwx "Name File"		  		 >> Give    Permission To All   [Read,Write,Execute]   		 [Use (ls -l) To Show The Permissions]
+64- whatis	"Name Command"		 		 >> Show    The Name Of This Short Command
+65- which       bash			 		 >> Show    The Bash Located
+66- nano        Test1.sh		 		 >> Create  Script & Type Sequence OF Operations In Terminal 	 [First Line Must Be (#!"Bash Located")] [Ctrl + O (Save)] [Ctrl + K (Cut)] [Ctrl + U (UnCut)] [Ctrl + W (Search)] [Ctrl + C (InfoLiNe Cursor Position & Cancel] [Ctrl + X (Exit)]
+67- ./"Name Script.sh"			 		 >> Active  Your Script
+68- df -h						 >> Know    Amount Of Disk Space [Focus On Root (/)]  
+69- du -h						 >> Know    Amount Of Dir  Space [Open Ur Dir To Know]
+70- find "Any Path" -name "Name File"			 >> Know    The Path             [Know Where it is]
+71- wc 		"Name File"				 >> Know    Number Of [Lines , Words , Chars]
+72- cal							 >> Show    The Calendar
+73- date						 >> Show    The Date
+74- date ; cal						 >> Show    The Calendar & Date ToGether
+75- ifconfig						 >> Know    Your IP		 [First Word it's Ur Way To Connection]
+76- sudo ifconfig "way Connection" down			 >> Make    Your InterNet Down 
+77- sudo ifconfig "way Connection" up			 >> Make    Your InterNet Up
+78- tar -cvf Gemy.tar Gemy				 >> Make    Dir Called Gemy compress Folder [Like Gemy.rar]
+79- tar -xvf Gemy.tar 					 >> Make    Uncompress Folder
+80- sudo apt-get install open-vm-tools			 >> Setup   The VMware Tools
+81- sudo apt-get install open-vm-tools-desktop		 >> ReSize  The DeskTop ReSolution
+82- eog "Name OF Image"					 >> To	    View The Image From Terminal
+83- sudo apt-get install shutter -y			 >> Install Program Called "Shutter" To Take Screen Shot
+
+					---------------------------------	
+					-        Created By Gemy        -
+					---------------------------------
+ 

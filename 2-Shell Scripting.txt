@@ -1,0 +1,175 @@
+			----------------------------------	
+			- Ubuntu 16.04.2 Shell Scripting -
+			----------------------------------
+ - LANG=C					>> To   Tell The OS There's Different Between Capital & Small Letters
+ - echo $BASH					>> Show Bash Name
+ - echo $BASH_VERSION				>> Show Bash Version
+ - echo $HOME					>> Show Home Directory
+ - echo $PWD					>> Show Ur   Directory
+ - echo "PID is $$"				>> Show The  Process ID [Write In Script]
+ - set -x					>> Star The  DeBug To Test Ur Script [Write In Script]
+ - set +x					>> Stop The  DeBug To Test Ur Script [Write In Script]
+ - # "Any Comment"				>> For Write Comments 
+ - cat /etc/shells				>> To Know Types Of Shells Ur System can Support
+ - which bash					>> Show The Bash Located	
+ - Ctrl + C					>> To Out Of Script
+
+1- nano  Test1.sh				>> Create Script & Type Sequence OF Operations In Terminal [Ctrl + O (Save)] [Ctrl + K (Cut)] [Ctrl + U (UnCut)] [Ctrl + W (Search)] [Ctrl + C (InfoLiNe Cursor Position & Cancel] [Ctrl + X (Exit)]
+   #! /bin/bash					>> Must Be First Line [#! Called "hash-Bang"] 
+   ./Test1.sh					>> To Execute The File Script 
+
+2- echo						>> To Print  New Line
+				
+3- read  Name1  Name2  Name3 			>> To Make   The User Input 3 Names
+   echo $Name1 $Name2 $Name3			>> To Print  The 3 Names
+					
+4- read -p "Enter Name :" Name			>> To Write  The ["Enter Name :" & Name] In The Same Line
+   echo -e "Enter Name : \c "			>> To Write  The ["Enter Name :" & Name] In The Same Line
+					
+5- read -sp "Enter Pass :" Pass			>> To Write  The ["Enter Pass :" & Name] In The Same Line [It's Hidden]
+6- read -a Names				>> To Make   The Variable Names Like Array
+   echo ${ Names[0] } ${ Names[1] }		>> To Print  The Array
+					
+7- Count=10					>> To Make   Variable Called Count Have Intger
+   if (( $Count -eq 10 ))			>> If Count  Equal 10 [-eq = Equal , -ne = Not Equal , -gt = Greater Than , -ge = Greater Or Equal , -lt = Less Than , -le = Less Or Equal]
+   then						>> So  Do    It
+   echo "True"					>> Print     True
+   fi						>> To Close  If Condition
+					
+8- Count="a"					>> To Make   Variable Called Count Have String
+   if [[ $Count > "b" ]]			>> If Count  Equal 10 [ == , > , < , >= , <= , != , -z (String Is Null) ]
+   then						>> So  Do    It
+   echo "True"					>> Print     True
+   else 					>> Other     Case
+   echo "False"					>> Print     False
+   fi						>> To Close  If Condition
+					
+9- echo -e "File_Name : \c "			>> To Print  & Write File Name On The Same Line
+   read File_Name				>> To InPut  The Name Of File
+   if [[ -e $File_Name ]]			>> If This   File Exists [ -e = Search For Files , -d = Search For Dirs , -s = Search For Empty , -b = Search For Pic or Video , -r = Search For Read , -w = Search For Write ,-x = Search For Execute]  
+   then						>> So  Do    That
+   echo $File_Name "Is exists"			>> Print     The Name Of File Is Exists
+   else						>> Other     Case
+   echo $File_Name "Is Not exists" 		>> Print     The Name Of File Is Not Exists
+   fi						>> To Close  If Condition
+
+10- echo -e  "File_Name :  \c"			>> To Print  & Write File Name On The Same Line					
+    
+    read Name					>> To InPut  The Name Of File	
+    if [[ -x $Name ]]				>> If This   File Executable	
+
+    then					>> So  Do    That	
+
+    chmod a=rw $Name				>> Change    Mode To All Can Read Write Only
+    echo "All Can Read Write Only"		>> To Print  This Message
+
+    else					>> Other     Case
+
+    chmod a=rwx $Name
+				>> Change    Mode To All Can Read Write and Execute
+    echo "All Can Read Write Execute"		>> To Print  This Message    
+    fi						>>
+
+ To Close  If Condition 
+
+11- if [[ $Age -gt 30 ]] && [[ $Age -lt 50 ]]   >> If Vriable Age Grater Than 30 [And] Less Than 50 [In Two Brackets]
+    if [[ $Age -gt 30    -a    $Age -lt 50 ]]   >> If Vriable Age Grater Than 30 [And] Less Than 50 [In One Brackets]
+
+12- if [[ $Age -gt 30 ]] || [[ $Age -lt 50 ]]   >> If Vriable Age Grater Than 30 [Or] Less Than 50 [In Two Brackets]
+    if [[ $Age -gt 30    -o    $Age -lt 50 ]]   >> If Vriable Age Grater Than 30 [Or] Less Than 50 [In One Brackets]
+
+13- Num1=20					>> Make Variable Called Num1 Have 20
+    Num2=40					>> Make Variable Called Num1 Have 40
+    echo $(( Num1 + Num2 ))			>> Print the Sum Of This Operation
+
+14- echo "scale = 3; 2.5 / 20" | bc		>> The Result Is [0.125] [Scale for Decimal Number]
+
+15- echo -e "Enter Any Letter: \c "		>> To Print & Write This Message On The Same Line
+    read Letter					>> To Make The User Input Any Thing 
+    case $Letter in				>> In Case 
+    [a-z])					>> From a To z Small Letter
+    echo "$Letter Between a to z";; 		>> Print This Message
+    [A-Z])					>> From A To Z Capital Letter
+    echo "$Letter Between A to Z";;		>> Print This Message
+    [0-10])					>> From 0 To 10 Number
+    echo "$Letter Between 0 to 10";;		>> Print This Message    
+    ?)						>> From Any Sign Or Special Character
+    echo "$Letter It's Special Char";;		>> Print This Message    
+    *)						>> "Other"
+    echo "UnKnown Input";;			>> Print This Message
+    esac					>> To Close Case Statement
+
+16- OS=('Ubuntu' 'Windows' Kali)		>> Make   Variable OS Like Array 
+    OS[3]='Mac'					>> Add    Mac To Index 3 In OS Array
+    unset OS[2]					>> Remove Kali From OS Array
+    echo "{OS[0]}"				>> Print  Ubuntu
+    echo "{OS[@]}"				>> Print  All Of OS Array
+    echo "{!OS[@]}"				>> Print  All Of Number Index OS Array
+    echo "{#OS[@]}"				>> Print  Length Of OS Array
+
+17- Num1 = 1					>> Make Variable Called Num1 Have 1
+    while (( $Num1 < 4 ))			>> Loop For Check If Num1 < 4 Or Not
+    
+do						>> So   Do  That
+    echo $Num1					>> Print This Value
+
+    (( Num1++ ))				>> Increase This Value +1 at the time
+    sleep 
+1					>> Print Once And Wait  1 Sec To Print Again 		
+    gnome-terminal &
+				>> Open Extra Terminal  Equivalent The Number Of Output
+    xterm &					>> Open Extra Terminal  Equivalent The Number Of Output	
+    done					>>
+
+ To   Close While     Loop
+
+18- Num1 = 1					>> Make Variable Called Num1 Have 1
+    until(( $Num1 > 4 ))			>> Loop To Stop When Num1 > 4 
+    
+do						>> So   Do  That
+    echo $Num1					>> Print This Value
+
+    (( Num1++ ))				>> Increase This Value +1 at the time
+    done					>>
+
+ To   Close Until     Loop
+
+19- for(( i = 0; i > 4; i++ ))			>> For Loop From 0 To 4 
+    
+do						>> So   Do  That
+    echo $i					>> Print This  Value
+
+    done					>> To    Close For Loop
+
+20- for Command in ls cal date			>> For Loop From This Command [ls , cal , date]
+    do						>> So   Do  That
+    echo "-------$Command-------"		>> Print Name Of Command In Message
+    $Command					>> Execute This Command
+    done					>> To    Close For Loop
+
+21- select name in Gemy Badr Omar Ali		>> Select Loop From This Names
+    do						>> So   Do  That
+    case $name in				>> In   Case
+    
+Gemy)					>> "Gemy"
+    echo "Gemy Selected";; 			>> Print This Message
+    Badr)					>> "Badr"
+    echo "Badr Selected";;			>> Print This Message
+    Omar)					>> "Omar"
+    echo "Omar Selected";;			>> Print This Message
+    Ali)					>> "Ali"
+    echo "Ali Selected";;			>> Print This Message
+    *)						>> "Other"
+    echo "1 : 4 Or Press Ctrl + C To Exit";;	>> Print This Message
+    esac					>> To    Close Case   Loop
+    done
+
+
+					>> To    Close Select Loop
+
+
+					---------------------------------	
+					-        Created By Gemy        -
+					---------------------------------
+ 
+
