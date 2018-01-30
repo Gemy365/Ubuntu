@@ -18,7 +18,7 @@
 4- ls -l 		 		  		 >> list with long format ( Read,Write,Excute,Date,..,etc)
 5- ls -lS 	  	 		  		 >> Sort Dirs by the Largest Size
 6- ls -a 	  	 		  		 >> show a hidden Dir & files (started by [.] )
-7- ls -d */		 		  		 >> show Only Dirs
+7- ls -d		 		  		 >> show Only Dirs
 8- ls -R 		 		  		 >> Show All The Paths Of All Dirs exists
 9- ls Desktop/*.txt	 		  		 >> search of all file have [.txt] in Desktop
 10- cd  		 		  		 >> Open Home Dir
@@ -95,7 +95,17 @@
 81- sudo apt-get install open-vm-tools-desktop		 >> ReSize  The DeskTop ReSolution
 82- eog "Name OF Image"					 >> To	    View The Image From Terminal
 83- sudo apt-get install shutter -y			 >> Install Program Called "Shutter" To Take Screen Shot
-
+--------------------------------Upload FOLDER Github----------------------------------------------
+84- git status						 >> To Know The Files Not Uploaded yet on github
+85- git add .						 >> To Add All New Files  on github
+--------------------------------REMOVE FOLDER Github----------------------------------------------
+86- git clone "URL Of Github"				 >> To Download github in any folder [Make Sure You Created New Folder]
+87- ls							 >> To See All "Your Repositories"
+87- cd 	"Your Repository"				 >> Open "Your Repository" Have Folder Wanna Delete
+88- ls							 >> To See All Folders And Choose That Wanna Delete
+89- git rm -r --cached "Name Of Folder"			 >> To Remove This Folder
+90- git commit -m 'remove folder'			 >> To Make Delete Mode
+91- git push origin master				 >> To Say Iam Agree  
 					---------------------------------	
 					-        Created By Gemy        -
 					---------------------------------
